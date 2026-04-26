@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-26T11:26:29.679Z",
+    "end": "2026-04-26T11:26:29.689Z",
+    "duration": 10,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15cdb7bf-dfcb-4bee-8c75-20ae30ad6915",
+      "title": "",
+      "fullFile": "C:\\Pós Automação de Testes\\Projetos\\ProgramacaoAutomacao_TrabalhoAula06\\test\\gestaoLogin.test.js",
+      "file": "\\test\\gestaoLogin.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a895377-23e1-44c8-bd21-ed3db394e4b9",
+          "title": "Teste de Login",
+          "fullFile": "C:\\Pós Automação de Testes\\Projetos\\ProgramacaoAutomacao_TrabalhoAula06\\test\\gestaoLogin.test.js",
+          "file": "\\test\\gestaoLogin.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com sucesso",
+              "fullTitle": "Teste de Login Deve realizar login com sucesso",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resultado = validarLogin('silva@gestaoteste.com', 'senha123');\nassert.equal(resultado, 'Login realizado com sucesso');",
+              "err": {},
+              "uuid": "cb536c04-5ea3-4729-9610-4ee2aca3f298",
+              "parentUUID": "4a895377-23e1-44c8-bd21-ed3db394e4b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve informar que as credenciais expiraram",
+              "fullTitle": "Teste de Login Deve informar que as credenciais expiraram",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resultado = validarLogin('souza@gestaoteste.com', 'senha456');    \nassert.equal(resultado, 'Renove suas credenciais');",
+              "err": {},
+              "uuid": "3b82b98c-981b-4eca-a68f-584a9e704178",
+              "parentUUID": "4a895377-23e1-44c8-bd21-ed3db394e4b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve informar que o usuário não foi encontrado",
+              "fullTitle": "Teste de Login Deve informar que o usuário não foi encontrado",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resultado = validarLogin('nao@existe.com', 'senha789');\nassert.equal(resultado, 'Usuario não encontrado');",
+              "err": {},
+              "uuid": "172eb265-8f4f-46df-8aaf-de90d172d28f",
+              "parentUUID": "4a895377-23e1-44c8-bd21-ed3db394e4b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve informar que a senha está incorreta",
+              "fullTitle": "Teste de Login Deve informar que a senha está incorreta",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resultado = validarLogin('silva@gestaoteste.com', 'senha incorreta');\nassert.equal(resultado, 'Senha incorreta');",
+              "err": {},
+              "uuid": "5af1fe73-ae19-4f65-aa9b-83cd7ba132c8",
+              "parentUUID": "4a895377-23e1-44c8-bd21-ed3db394e4b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cb536c04-5ea3-4729-9610-4ee2aca3f298",
+            "3b82b98c-981b-4eca-a68f-584a9e704178",
+            "172eb265-8f4f-46df-8aaf-de90d172d28f",
+            "5af1fe73-ae19-4f65-aa9b-83cd7ba132c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
