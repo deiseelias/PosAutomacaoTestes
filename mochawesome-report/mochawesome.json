@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-16T10:21:09.985Z",
+    "end": "2026-05-16T10:21:09.988Z",
+    "duration": 3,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a6dfabd-a0a4-4e55-95f7-d157219c98a1",
+      "title": "",
+      "fullFile": "C:\\Users\\deise.elias\\Documents\\Pós\\ProgramacaoAutomacao\\test\\ServicoDePagamento.test.js",
+      "file": "\\test\\ServicoDePagamento.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "80d8c1ac-d26b-4ecd-bd55-39d5a12a12f3",
+          "title": "Testes do Serviço de Pagamento",
+          "fullFile": "C:\\Users\\deise.elias\\Documents\\Pós\\ProgramacaoAutomacao\\test\\ServicoDePagamento.test.js",
+          "file": "\\test\\ServicoDePagamento.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Registrar pagamento maior que 100.00 como categoria \"cara\"",
+              "fullTitle": "Testes do Serviço de Pagamento Registrar pagamento maior que 100.00 como categoria \"cara\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const servico = new ServicoDePagamento();\nconst valorTeste = 150.00\n\nservico.pagar('123-456', 'Empresa Um', valorTeste);\nconst resultado = servico.consultarUltimoPagamento();\nassert.equal(resultado.categoria, 'cara');\nassert.equal(resultado.valor, valorTeste)",
+              "err": {},
+              "uuid": "82ce7fbe-8218-4aff-a564-725e6cb9a252",
+              "parentUUID": "80d8c1ac-d26b-4ecd-bd55-39d5a12a12f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Registrar um pagamento menor ou igual a 100 como categoria \"padrão\"",
+              "fullTitle": "Testes do Serviço de Pagamento Registrar um pagamento menor ou igual a 100 como categoria \"padrão\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const servico = new ServicoDePagamento();\nconst valorTeste = 99.00\nservico.pagar('789-012', 'Empresa Dois', valorTeste)\nconst resultado = servico.consultarUltimoPagamento();\nassert.equal(resultado.categoria, 'padrao')\nassert.equal(resultado.valor, valorTeste)",
+              "err": {},
+              "uuid": "14831a29-0c10-413d-996d-43ed8b4278c2",
+              "parentUUID": "80d8c1ac-d26b-4ecd-bd55-39d5a12a12f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Retornar o último pagamento realizado",
+              "fullTitle": "Testes do Serviço de Pagamento Retornar o último pagamento realizado",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const servico = new ServicoDePagamento();\nservico.pagar('001', 'Empresa Um', 10.00);\nservico.pagar('002', 'Empresa Dois', 20.00); \nconst resultado = servico.consultarUltimoPagamento();\nassert.equal(resultado.empresa, 'Empresa Dois');",
+              "err": {},
+              "uuid": "61ec2999-1c78-43a6-ad85-6fa38ae8d4e8",
+              "parentUUID": "80d8c1ac-d26b-4ecd-bd55-39d5a12a12f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82ce7fbe-8218-4aff-a564-725e6cb9a252",
+            "14831a29-0c10-413d-996d-43ed8b4278c2",
+            "61ec2999-1c78-43a6-ad85-6fa38ae8d4e8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
